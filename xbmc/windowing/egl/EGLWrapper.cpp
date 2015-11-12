@@ -22,7 +22,10 @@
 
 #ifdef HAS_EGL
 
+#include "system_gl.h"
+
 #include "utils/log.h"
+#include "EGLNativeTypeA10.h"
 #include "EGLNativeTypeAndroid.h"
 #include "EGLNativeTypeAmlogic.h"
 #include "EGLNativeTypeRaspberryPI.h"
@@ -74,6 +77,20 @@ bool CEGLWrapper::Initialize(const std::string &implementation)
   {
     delete nativeGuess;
     nativeGuess = new CEGLNativeTypeRaspberryPI;
+    if (nativeGuess->CheckCompatibility())
+    {
+      if(implementation == nativeGuess->GetNativeName() || implementation == "auto")
+      {
+        m_nativeTypes = nativeGuess;
+        ret = true;
+      }
+    }
+  }
+
+  if (!ret)
+  {
+    delete nativeGuess;
+    nativeGuess = new CEGLNativeTypeA10;
     if (nativeGuess->CheckCompatibility())
     {
       if(implementation == nativeGuess->GetNativeName() || implementation == "auto")

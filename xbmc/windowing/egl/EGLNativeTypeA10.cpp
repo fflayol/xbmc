@@ -19,65 +19,68 @@
  */
 #include "system.h"
 #include <EGL/egl.h>
-#include "EGLNativeTypeAndroid.h"
+#include "EGLNativeTypeA10.h"
 #include "utils/log.h"
 #include "guilib/gui3d.h"
-#if defined(TARGET_ANDROID)
-#include "android/activity/XBMCApp.h"
-#ifdef ALLWINNERA10
+
+#if defined(ALLWINNERA10) && !defined(TARGET_ANDROID)
 #include "cores/VideoRenderers/LinuxRendererA10.h"
-static double g_refreshRate;
+static struct mali_native_window g_fbwin;
+static double       g_refreshRate;
 #endif
-#endif
-CEGLNativeTypeAndroid::CEGLNativeTypeAndroid()
+
+CEGLNativeTypeA10::CEGLNativeTypeA10()
 {
-#if defined(ALLWINNERA10) && defined(TARGET_ANDROID)
+#if defined(ALLWINNERA10) && !defined(TARGET_ANDROID)
   int width, height;
+
   A10VLInit(width, height, g_refreshRate);
+  g_fbwin.width  = width;
+  g_fbwin.height = height;
 #endif
 }
 
-CEGLNativeTypeAndroid::~CEGLNativeTypeAndroid()
+CEGLNativeTypeA10::~CEGLNativeTypeA10()
 {
-#if defined(ALLWINNERA10) && defined(TARGET_ANDROID)
+#if defined(ALLWINNERA10) && !defined(TARGET_ANDROID)
   A10VLExit();
 #endif
 } 
 
-bool CEGLNativeTypeAndroid::CheckCompatibility()
+bool CEGLNativeTypeA10::CheckCompatibility()
 {
-#if defined(TARGET_ANDROID)
+#if defined(ALLWINNERA10) && !defined(TARGET_ANDROID)
   return true;
 #endif
   return false;
 }
 
-void CEGLNativeTypeAndroid::Initialize()
+void CEGLNativeTypeA10::Initialize()
 {
   return;
 }
-void CEGLNativeTypeAndroid::Destroy()
+void CEGLNativeTypeA10::Destroy()
 {
   return;
 }
 
-bool CEGLNativeTypeAndroid::CreateNativeDisplay()
+bool CEGLNativeTypeA10::CreateNativeDisplay()
 {
   m_nativeDisplay = EGL_DEFAULT_DISPLAY;
   return true;
 }
 
-bool CEGLNativeTypeAndroid::CreateNativeWindow()
+bool CEGLNativeTypeA10::CreateNativeWindow()
 {
-#if defined(TARGET_ANDROID)
-  m_nativeWindow = CXBMCApp::GetNativeWindow();
+#if defined(ALLWINNERA10) && !defined(TARGET_ANDROID)
+  m_nativeWindow = &g_fbwin;
   return true;
 #else
   return false;
 #endif
 }  
 
-bool CEGLNativeTypeAndroid::GetNativeDisplay(XBNativeDisplayType **nativeDisplay) const
+bool CEGLNativeTypeA10::GetNativeDisplay(XBNativeDisplayType **nativeDisplay) const
 {
   if (!nativeDisplay)
     return false;
@@ -85,39 +88,32 @@ bool CEGLNativeTypeAndroid::GetNativeDisplay(XBNativeDisplayType **nativeDisplay
   return true;
 }
 
-bool CEGLNativeTypeAndroid::GetNativeWindow(XBNativeWindowType **nativeWindow) const
+bool CEGLNativeTypeA10::GetNativeWindow(XBNativeWindowType **nativeWindow) const
 {
-  if (!nativeWindow || !m_nativeWindow)
+  if (!nativeWindow)
     return false;
   *nativeWindow = (XBNativeWindowType*) &m_nativeWindow;
   return true;
 }
 
-bool CEGLNativeTypeAndroid::DestroyNativeDisplay()
+bool CEGLNativeTypeA10::DestroyNativeDisplay()
 {
   return true;
 }
 
-bool CEGLNativeTypeAndroid::DestroyNativeWindow()
+bool CEGLNativeTypeA10::DestroyNativeWindow()
 {
-  m_nativeWindow = NULL;
   return true;
 }
 
-bool CEGLNativeTypeAndroid::GetNativeResolution(RESOLUTION_INFO *res) const
+bool CEGLNativeTypeA10::GetNativeResolution(RESOLUTION_INFO *res) const
 {
-#if defined(TARGET_ANDROID)
-  ANativeWindow_acquire((EGLNativeWindowType)m_nativeWindow);
-  res->iWidth = ANativeWindow_getWidth((EGLNativeWindowType)m_nativeWindow);
-  res->iHeight= ANativeWindow_getHeight((EGLNativeWindowType)m_nativeWindow);
-  ANativeWindow_release((EGLNativeWindowType)m_nativeWindow);
+#if defined(ALLWINNERA10) && !defined(TARGET_ANDROID)
+  res->iWidth = g_fbwin.width;
+  res->iHeight= g_fbwin.height;
 
-#ifdef ALLWINNERA10
   res->fRefreshRate = g_refreshRate;
-#else
-  res->fRefreshRate = 60;
-#endif
-  res->dwFlags= D3DPRESENTFLAG_PROGRESSIVE;
+  res->dwFlags= D3DPRESENTFLAG_PROGRESSIVE | D3DPRESENTFLAG_WIDESCREEN;
   res->iScreen       = 0;
   res->bFullScreen   = true;
   res->iSubtitles    = (int)(0.965 * res->iHeight);
@@ -133,12 +129,12 @@ bool CEGLNativeTypeAndroid::GetNativeResolution(RESOLUTION_INFO *res) const
 #endif
 }
 
-bool CEGLNativeTypeAndroid::SetNativeResolution(const RESOLUTION_INFO &res)
+bool CEGLNativeTypeA10::SetNativeResolution(const RESOLUTION_INFO &res)
 {
   return false;
 }
 
-bool CEGLNativeTypeAndroid::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions)
+bool CEGLNativeTypeA10::ProbeResolutions(std::vector<RESOLUTION_INFO> &resolutions)
 {
   RESOLUTION_INFO res;
   bool ret = false;
@@ -151,12 +147,12 @@ bool CEGLNativeTypeAndroid::ProbeResolutions(std::vector<RESOLUTION_INFO> &resol
   return false;
 }
 
-bool CEGLNativeTypeAndroid::GetPreferredResolution(RESOLUTION_INFO *res) const
+bool CEGLNativeTypeA10::GetPreferredResolution(RESOLUTION_INFO *res) const
 {
   return false;
 }
 
-bool CEGLNativeTypeAndroid::ShowWindow(bool show)
+bool CEGLNativeTypeA10::ShowWindow(bool show)
 {
   return false;
 }
