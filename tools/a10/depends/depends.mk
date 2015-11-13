@@ -103,9 +103,9 @@ ${RLINK_PATH} \
 -L${SDKSTAGE}/usr/lib/arm-linux-gnueabi$(HF)
 
 ifeq ($(USEARMHF), 1)
-export CFLAGS=-pipe -O3 -mfloat-abi=hard -mtune=cortex-a7 -mcpu=cortex-a7 -D__ARM_NEON__ -DALLWINNERA20
+export CFLAGS=-pipe -O3 -mfloat-abi=hard -mfpu=neon-vfpv4 -mtune=cortex-a7 -mcpu=cortex-a7 -D__ARM_NEON__ -DALLWINNERA10
 else
-export CFLAGS=-pipe -O3 -mfloat-abi=softfp -mtune=cortex-a7 -mcpu=cortex-a7 -D__ARM_NEON__ -DALLWINNERA20
+export CFLAGS=-pipe -O3 -mfloat-abi=softfp -mtune=cortex-a7 -mcpu=cortex-a7 -D__ARM_NEON__ -DALLWINNERA10
 endif
 export CFLAGS+=$(CEDARINCLUDES) $(GLESINCLUDES)
 export CFLAGS+=\
