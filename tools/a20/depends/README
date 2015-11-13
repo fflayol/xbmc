@@ -2,6 +2,13 @@ Please look at depends.mk.
 After adjusting run make && make -C xbmc.
 If configure is done you can compile from the source root directory.
 
+KNOWN PROBLEMS DURING COMPILATION:
+==================================
+If you have this compilation error:
+  cc1plus: error: bad value (cortex-a7) for -mtune switch
+  cc1plus: error: bad value (cortex-a7) for -mcpu switch
+Ensure that you use gcc and g++ version 4.7  
+
 KNOWN PROBLEMS WITH HARDWARE RENDERING:
 =======================================
 
@@ -21,5 +28,4 @@ KNOWN PROBLEMS WITH PVR:
 
 - only SD-TV tested (since i do not have DVB-S2 hardware)
 
-PLEASE REMEMBER: This is poc.
 

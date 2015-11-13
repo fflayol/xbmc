@@ -42,7 +42,7 @@ XBMCPREFIX=/allwinner/xbmc-pvr-bin$(HF)
 #where is your toolchain
 TOOLCHAIN=/usr
 
-JOBS=2
+JOBS=1
 export HOST=arm-linux-gnueabi$(HF)
 export BUILD=arm-linux-gnueabi$(HF)
 export CROSS_COMPILE=
