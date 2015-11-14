@@ -15,13 +15,13 @@ CONFIGURE=./configure \
 	--enable-neon \
 	--enable-gles \
 	--disable-mysql \
+	--disable-dvdcss \
 	--disable-optical-drive \
 	--disable-crystalhd \
 	--disable-vtbdecoder \
 	--disable-pulse \
 	--disable-projectm \
 	--disable-libcec \
-	--disable-optimizations \
 
 SRC=../../../../
 
