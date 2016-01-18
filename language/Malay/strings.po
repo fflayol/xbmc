@@ -1,12 +1,12 @@
 # XBMC Media Center language file
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Main Translation Project (Frodo)\n"
+"Project-Id-Version: XBMC Main\n"
 "Report-Msgid-Bugs-To: http://trac.xbmc.org/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: XBMC Translation Team\n"
-"Language-Team: Malay (http://www.transifex.com/projects/p/XBMC-Main-Frodo/language/ms/)\n"
+"Language-Team: Malay (http://www.transifex.com/projects/p/xbmc-main/language/ms/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -332,6 +332,10 @@ msgstr "Tidak"
 msgctxt "#107"
 msgid "Yes"
 msgstr "Ya"
+
+msgctxt "#111"
+msgid "Shortcuts"
+msgstr "Pintasan"
 
 msgctxt "#112"
 msgid "Paused"
@@ -801,17 +805,9 @@ msgctxt "#249"
 msgid "Music"
 msgstr "Musik"
 
-msgctxt "#250"
-msgid "Visualization"
-msgstr "Visualisasi"
-
 msgctxt "#251"
 msgid "Select destination directory"
 msgstr "Pilih destinasi direktori"
-
-msgctxt "#252"
-msgid "Output stereo to all speakers"
-msgstr "Output stereo ke semua pembesar suara"
 
 msgctxt "#253"
 msgid "Number of channels"
@@ -893,6 +889,10 @@ msgctxt "#304"
 msgid "Language"
 msgstr "Bahasa"
 
+msgctxt "#305"
+msgid "Enabled"
+msgstr "Dibenarkan"
+
 msgctxt "#350"
 msgid "Programs"
 msgstr "Program"
@@ -913,6 +913,10 @@ msgctxt "#367"
 msgid "Sort by: Rating"
 msgstr "Isihan: Rating"
 
+msgctxt "#370"
+msgid "Thunderstorms"
+msgstr "Ribut Petir"
+
 msgctxt "#400"
 msgid "Weather"
 msgstr "Cuaca"
@@ -929,6 +933,10 @@ msgctxt "#444"
 msgid "Video"
 msgstr "Video"
 
+msgctxt "#449"
+msgid "Enabled"
+msgstr "Dibenarkan"
+
 msgctxt "#498"
 msgid "Sort by: Type"
 msgstr "Isihan: Jenis"
@@ -940,6 +948,14 @@ msgstr "Isihan: Penggunaan"
 msgctxt "#550"
 msgid "Sort by: %s"
 msgstr "Isihan: %s"
+
+msgctxt "#571"
+msgid "Default"
+msgstr "Lalai"
+
+msgctxt "#574"
+msgid "Country"
+msgstr "Negara"
 
 msgctxt "#580"
 msgid "Sort direction"
@@ -965,9 +981,29 @@ msgctxt "#633"
 msgid "Wide Zoom"
 msgstr "Zum Lebar"
 
+msgctxt "#719"
+msgid "IP address"
+msgstr "Alamat IP"
+
+msgctxt "#733"
+msgid "Password"
+msgstr "Kata Laluan"
+
 msgctxt "#1006"
 msgid "IP address"
 msgstr "Alamat IP"
+
+msgctxt "#1014"
+msgid "Username"
+msgstr "Nama Pengguna"
+
+msgctxt "#1048"
+msgid "Username"
+msgstr "Nama Pengguna"
+
+msgctxt "#1181"
+msgid "HTTP"
+msgstr "HTTP"
 
 msgctxt "#1211"
 msgid "Music"
@@ -981,9 +1017,21 @@ msgctxt "#1213"
 msgid "Pictures"
 msgstr "Gambar"
 
+msgctxt "#1223"
+msgid "Disabled"
+msgstr "Dilumpuhkan"
+
 msgctxt "#1397"
 msgid "and"
 msgstr "dan"
+
+msgctxt "#1403"
+msgid "Sun"
+msgstr "Sun"
+
+msgctxt "#1411"
+msgid "with"
+msgstr "dengan"
 
 msgctxt "#1418"
 msgid "Thunderstorms"
@@ -1097,6 +1145,10 @@ msgctxt "#10002"
 msgid "Pictures"
 msgstr "Gambar"
 
+msgctxt "#10003"
+msgid "File manager"
+msgstr "Pengurus Fail"
+
 msgctxt "#10004"
 msgid "Settings"
 msgstr "Seting"
@@ -1105,9 +1157,29 @@ msgctxt "#10005"
 msgid "Music"
 msgstr "Musik"
 
+msgctxt "#10006"
+msgid "Videos"
+msgstr "Video"
+
+msgctxt "#10020"
+msgid "Scripts"
+msgstr "Skrip"
+
+msgctxt "#10025"
+msgid "Videos"
+msgstr "Video"
+
+msgctxt "#10038"
+msgid "Advanced"
+msgstr "Lanjutan"
+
 msgctxt "#10506"
 msgid "Programs"
 msgstr "Program"
+
+msgctxt "#10511"
+msgid "System info"
+msgstr "Info sistem"
 
 msgctxt "#12349"
 msgid "Updating video library art"
@@ -1133,9 +1205,29 @@ msgctxt "#12600"
 msgid "Weather"
 msgstr "Cuaca"
 
+msgctxt "#13106"
+msgid "Disabled"
+msgstr "Dilumpuhkan"
+
+msgctxt "#13113"
+msgid "Disabled"
+msgstr "Dilumpuhkan"
+
+msgctxt "#13131"
+msgid "Disabled"
+msgstr "Dilumpuhkan"
+
 msgctxt "#13205"
 msgid "Unknown"
 msgstr "Tidak Diketahui"
+
+msgctxt "#13277"
+msgid "Storage"
+msgstr "Simpanan"
+
+msgctxt "#13278"
+msgid "Default"
+msgstr "Lalai"
 
 msgctxt "#13280"
 msgid "Video"
@@ -1144,6 +1236,14 @@ msgstr "Video"
 msgctxt "#13310"
 msgid "Zoom effect"
 msgstr "Kesan zum"
+
+msgctxt "#13350"
+msgid "Current playlist"
+msgstr "Senarai audio video semasa"
+
+msgctxt "#13398"
+msgid "Shortcuts"
+msgstr "Pintasan"
 
 msgctxt "#13399"
 msgid "Ignore articles when sorting (e.g. \"the\")"
@@ -1177,9 +1277,29 @@ msgctxt "#13515"
 msgid "No art"
 msgstr "Tiada karya seni"
 
+msgctxt "#13610"
+msgid "Disabled"
+msgstr "Dilumpuhkan"
+
+msgctxt "#14036"
+msgid "Services"
+msgstr "Perkhidmatan"
+
+msgctxt "#14086"
+msgid "Playback"
+msgstr "Main Balik"
+
 msgctxt "#14098"
 msgid "Play"
 msgstr "Main"
+
+msgctxt "#15014"
+msgid "Keep"
+msgstr "Kekal"
+
+msgctxt "#15052"
+msgid "Password"
+msgstr "Kata Laluan"
 
 msgctxt "#16000"
 msgid "General"
@@ -1193,6 +1313,22 @@ msgctxt "#19003"
 msgid "Find similar programs"
 msgstr "Cari program yang sama"
 
+msgctxt "#19019"
+msgid "Channels"
+msgstr "Saluran"
+
+msgctxt "#19020"
+msgid "TV"
+msgstr "TV"
+
+msgctxt "#19023"
+msgid "TV channels"
+msgstr "Saluran TV"
+
+msgctxt "#19024"
+msgid "Radio channels"
+msgstr "Saluran radio"
+
 msgctxt "#19031"
 msgid "Next"
 msgstr "Seterusnya"
@@ -1200,6 +1336,18 @@ msgstr "Seterusnya"
 msgctxt "#19062"
 msgid "Sort by: Channel"
 msgstr "Isihan: Saluran"
+
+msgctxt "#19136"
+msgid "Channel unavailable"
+msgstr "Saluran tidak tersedia"
+
+msgctxt "#19177"
+msgid "Playback"
+msgstr "Main Balik"
+
+msgctxt "#19180"
+msgid "TV"
+msgstr "TV"
 
 msgctxt "#19268"
 msgid "Do not show 'no information available' labels"
@@ -1353,17 +1501,37 @@ msgctxt "#19559"
 msgid "Martial Sports"
 msgstr "Sukan Seni Mempertahankan Diri"
 
+msgctxt "#19677"
+msgid "Detective/Thriller"
+msgstr "Detektif/Ngeri"
+
+msgctxt "#19678"
+msgid "Adventure/Western/War"
+msgstr "Pengembaraan/Barat/Perang"
+
+msgctxt "#19679"
+msgid "Science Fiction/Fantasy/Horror"
+msgstr "Sains Fiksyen/Fantasi/Seram"
+
 msgctxt "#19680"
 msgid "Comedy"
 msgstr "Komedi"
+
+msgctxt "#19681"
+msgid "Soap/Melodrama/Folkloric"
+msgstr "Lipur Lara/Mélodrama/Budaya Rakyat"
 
 msgctxt "#19682"
 msgid "Romance"
 msgstr "Percintaan"
 
 msgctxt "#20109"
-msgid "- Zoom"
-msgstr "- Zum"
+msgid "Zoom"
+msgstr "Zum"
+
+msgctxt "#20142"
+msgid "Username"
+msgstr "Nama Pengguna"
 
 msgctxt "#20242"
 msgid "Android pictures"
@@ -1401,6 +1569,14 @@ msgctxt "#20321"
 msgid "Scanning albums using %s"
 msgstr "Mengimbas album menggunakan %s"
 
+msgctxt "#20422"
+msgid "Always"
+msgstr "Sentiasa"
+
+msgctxt "#20445"
+msgid "Fanart"
+msgstr "Hasil Seni Peminat"
+
 msgctxt "#20459"
 msgid "Tags"
 msgstr "Tag"
@@ -1424,6 +1600,18 @@ msgstr "Tag dengan nama %s sudah wujud."
 msgctxt "#20464"
 msgid "Select %s"
 msgstr "Pilih %s"
+
+msgctxt "#21417"
+msgid "Settings"
+msgstr "Seting"
+
+msgctxt "#21445"
+msgid "Video codec"
+msgstr "Kodeks video"
+
+msgctxt "#21446"
+msgid "Audio codec"
+msgstr "Kodeks audio"
 
 msgctxt "#21456"
 msgid "External storage"
@@ -1453,13 +1641,33 @@ msgctxt "#21838"
 msgid "Digital zoom"
 msgstr "Zum Digital"
 
+msgctxt "#21875"
+msgid "Country"
+msgstr "Negara"
+
+msgctxt "#23054"
+msgid "Running"
+msgstr "Berjalan"
+
 msgctxt "#23055"
 msgid "Scale Teletext to 4:3"
 msgstr "Pengskalaan Teleteks ke 4:3"
 
+msgctxt "#24013"
+msgid "Lyrics"
+msgstr "Lirik"
+
+msgctxt "#24018"
+msgid "Services"
+msgstr "Perkhidmatan"
+
 msgctxt "#24019"
 msgid "PVR clients"
 msgstr "klien PVR"
+
+msgctxt "#24023"
+msgid "Disabled"
+msgstr "Dilumpuhkan"
 
 msgctxt "#24027"
 msgid "Weather"
@@ -1468,6 +1676,34 @@ msgstr "Cuaca"
 msgctxt "#24029"
 msgid "Service for weather information"
 msgstr "Servis untuk informasi cuaca"
+
+msgctxt "#33021"
+msgid "Precipitation"
+msgstr "Presipitasi"
+
+msgctxt "#33063"
+msgid "Options"
+msgstr "Opsyen"
+
+msgctxt "#33068"
+msgid "Background"
+msgstr "Latar Belakang"
+
+msgctxt "#33081"
+msgid "This file is stacked, select the part you want to play from."
+msgstr "Fail ini disusun tindan. Pilih bahagian yang anda ingin mainkan."
+
+msgctxt "#34100"
+msgid "Number of channels"
+msgstr "Jumlah saluran"
+
+msgctxt "#34122"
+msgid "Always"
+msgstr "Sentiasa"
+
+msgctxt "#35500"
+msgid "Location"
+msgstr "Kedudukan"
 
 msgctxt "#36028"
 msgid "Ignore"
@@ -1481,14 +1717,6 @@ msgctxt "#36030"
 msgid "Connection lost"
 msgstr "Sambungan hilang"
 
-msgctxt "#36031"
-msgid "This user does not have permissions to open the CEC adapter"
-msgstr "Pengguna ini tidak mempunyai kebenaran untuk mengakses adapter CEC"
-
-msgctxt "#36032"
-msgid "The port is busy. Only one program can access the CEC adapter"
-msgstr "Port ini sibuk. Hanya satu program boleh mengakses adapter CEC"
-
 msgctxt "#36035"
 msgid "Always"
 msgstr "Sentiasa"
@@ -1496,3 +1724,7 @@ msgstr "Sentiasa"
 msgctxt "#36037"
 msgid "TV"
 msgstr "TV"
+
+msgctxt "#36428"
+msgid "Record"
+msgstr "Rakam"
